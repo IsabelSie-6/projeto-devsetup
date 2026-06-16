@@ -1,60 +1,220 @@
 <!DOCTYPE html>
 <html lang="PT-br">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index.html</title>
+    <style>
+.botaoPrincipal {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+     }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color:#f8f9fa;
+        color: #333333;
+        line-height: 1.6;
+    }
+
+    h1,h2,h3 {
+        color: #1a1a1a;
+        margin-bottom: 1rem;
+    } 
+    
+    p {
+        margin-bottom: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+        .cabecalhoPrincipal {
+        background-color: #ffffff;
+        padding: 1.5rem, 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+     .nomeLogo {
+    font-size: 3.0rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    color: #d81569;
+        }
+
+        .listaNavegacao {
+        display: flex;
+        gap: 2rem;
+        font-family:fantasy ;
+        color: #e904a5;
+    }
+    
+    .linkNavegacao {
+        font-weight: 600;
+        transition: collor 0.3s ease;
+    }
+
+    .linknav:hover {
+    color: #ff6ed3;;
+    }
+
+    .container {
+        padding: 4rem 5%;
+    }
+
+     .tituloSecao {
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: 2rem;
+        color: hotpink;
+    }
+
+    .tituloSecao2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: 2rem;
+        color: rgb(210, 0, 105);
+    }
+
+    .gradeProdutos {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap ;
+    }
+    .cartaoProduto {
+        background-color: #ffffffff;
+        border-radius: 8px;
+        padding: 1.5rem;
+        width: 300px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .cartaoProduto:hover {
+       transform: translate(-5px);
+    }
+
+    .rodapePrincipal {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: space-between;
+    flex: wrap;
+    gap: 2rem;
+    }
+
+    .rodapePrincipal h2,
+    .rodapePrincipal h3 {
+        color: #ffffff;
+    }
+    
+    .letrasBonitas{
+     font-weight: bold;
+     font-size: 1.5rem;
+     font-family: sans-serif;
+
+    }
+
+    
+    </style>
+
+
+<!--Cabeçalho do Site-->   
 </head>
 <body>
-    <header>
-        <h1>DevSetup Equipamentos</h1>
-        <nav> 
-            <ul>
-                <li><a href="#categorias">Categorias</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#serviços">Serviços</a></li>
-                <li><a href="cadastro.html">Cadastro.html</a></li>
+    <header id="header" class="cabecalhoPrincipal">
+        <div id="logo">
+        <h1 class="nomeLogo">DevSetup Equipamentos</h1>
+        </div>
+        <nav id="links"> 
+            <ul class="listaNavegacao">
+                <li>
+                    <a href="#categorias" class="linkNav">Categorias</a>
+                </li>
+                <li>
+                    <a href="#produtos" class="linkNav">Produtos</a>
+                </li>
+                <li>
+                    <a href="#serviços" class="linkNav">Serviços</a>
+                </li>
+                <li>
+                    <a href="cadastro.html" class="linkNav">Cadastro</a>
+                </li>
             </ul>
-
+    </header>
+       
+            <!--Conteúdo Principal-->
             <section id="categorias">
-                <h2>Nossas Categorias</h2>
+                <div  style="max-width: 800px; margin: 0 auto; text-align: center;">
+         <p> 
+                <h2 class="tituloSecao">Nossas Categorias</h2>
                 <ul>
-                    <li> Notebooks </li>
-                    <li> Periféricos </li>
-                    <li> Monitores </li>
-                    <li>Placas de Vídeo</li>
+                    <li style="margin-bottom: 0.5rem;"> Notebooks </li>
+                    <li style="margin-bottom: 0.5rem;"> Periféricos </li>
+                    <li style="margin-bottom: 0.5rem;"> Monitores </li>
+                    <li style="margin-bottom: 0.5rem;">Placas de Vídeo</li>
                 </ul>
+                </div>
              </section>
-
-             <section id="produtos">
-                <article>
-                    <h3>Notebooks</h3>
+             <br>
+             <br>
+           
+             <!--Seção Produtos-->
+             <section id="produtos" class="container" style=" background-color: #eeeeee;">
+               <h2 class="tituloSecao2">Nossos Produtos</h2>
+                <div  class="gradeProdutos">
+                <article  class="cartaoProduto">
+                    <h3 style="margin-bottom: 0.5rem;">Notebooks</h3>
                     <img src="https://images.pexels.com/photos/5793947/pexels-photo-5793947.jpeg" 
-                    alt="Notebook de trabalho" width="400">
+                    alt="Notebook de trabalho" width="250">
                     <p> Notebook de trabalho em cima de uma mesa com uma caneca ao lado direito.</p>
                 </article>
 
-                <article>
+                <article class="cartaoProduto">
                     <h3>Periféricos</h3>
                     <img src="https://images.pexels.com/photos/17112939/pexels-photo-17112939.jpeg" 
-                    alt="Periféricos de Computador" width="300">
+                    alt="Periféricos de Computador" width="250">
                     <p> Periféricos de computador em uma mesa.</p>
                 </article>
 
-                <article>
+                <article class="cartaoProduto">
                     <h3>Monitores</h3>
                     <img src="https://images.pexels.com/photos/18304033/pexels-photo-18304033.jpeg" 
-                    alt="Monitores de Computador" width="400">
+                    alt="Monitores de Computador" width="250">
                     <p>Monitores de computador gamer em uma mesa.</p>
                 </article>
 
-                <article>
+                <article class="cartaoProduto">
                     <h3>Placas de Vídeo</h3>
                     <img src="https://images.pexels.com/photos/6704947/pexels-photo-6704947.jpeg" 
-                    alt="Placa de Vídeo" width="300">
+                    alt="Placa de Vídeo" width="250">
                     <p> Placa de vídeo</p>
                 </article>
-
+                </div>
              </section>
 
              <section id="serviços">
