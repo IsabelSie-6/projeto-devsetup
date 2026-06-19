@@ -3,45 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cadastro.html</title>
+    <title>Formulário de Cadastro</title>
+<style>
+    .botaoPrincipal {
+    display: inline-block;
+    background-color: #b6005b;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+     }
 
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family:Georgia, 'Times New Roman', Times, serif
+        background-color:#f8f9fa;
+        color: #333333;
+        line-height: 1.6;
+    }
+ 
+     h1,h2,h3 {
+        color: #1a1a1a;
+        margin-bottom: 1rem;
+    } 
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .container {
+        padding: 4rem 5%;
+    }
+    
+    .tituloSecao2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: 2rem;
+        color: rgb(210, 0, 105);
+    }
+
+</style>
 </head>
 <body>
     
     <header>
-        <h1>Crie sua conta</h1>
-
+        <h1 class="tituloSecao2">Crie sua conta</h1>
         <nav>
-            <a href="index.html">Voltar para a Página Inicial</a>
+            <a href="index.html"  style="color: #b6005b; font-weight: bold;">Voltar para a Página Inicial</a>
         </nav>
+        <br>
+        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem;">
+            Faça seu cadastro e receba notícias, ofertas e promoções imperdíveis! .
+        </p>
+        <address style="text-align: center; margin-bottom: 2rem; font-style: normal;">
+        <p>
     </header>
-    <main>
-       <form> 
+    <main  style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+       <form id="faleconosco" class="container" style="background-color: #eceff1;"> 
         <div> 
             <label for="nome">Nome Completo</label>
-            <input type="text" id="nome" name="nome">
+            <input type="text" name="Nome" id="Nome" placeholder="Digite seu Nome" required style="width: 100%; padding: 0.8rem; margin: 0.5 0 1.5rem 0; border: 1px solid #cccccc; border-radius: 4px;">
         </div>
-
         <br>
         <div>
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha">
+            <label for="email">Digite seu E-mail.</label>
+            <input type="text" name="Nome" id="Nome" placeholder="Digite seu Nome" required style="width: 100%; padding: 0.8rem; margin: 0.5 0 1.5rem 0; border: 1px solid #cccccc; border-radius: 4px;">
         </div>
-
+         <br>
+         <div>
+            <label for="senha">Senha</label>
+            <input type="text" name="Nome" id="Nome" placeholder="Digite seu Nome" required style="width: 100%; padding: 0.8rem; margin: 0.5 0 1.5rem 0; border: 1px solid #cccccc; border-radius: 4px;">
+        </div>
         <br>
-
         <div>
             <label for="interesse">Interesse Principal</label>
-            <select name="interesse" id="interesse">
+            <select name="interesse" id="interesse" style="width: 100%; padding: 0.8rem; margin: 0.5 0 1.5rem 0; border: 1px solid #cccccc; border-radius: 4px;">
                 <option>Hardware</option>
                 <option>Periféricos</option>
                 <option> Software</option>
             </select>
         </div>
-
+        
         <br>
-        <button type="submit">Cadastrar</button>
-
+        <button type="submit" class="botaoPrincipal">Cadastrar</button>
        </form>
     </main>
 </body>
